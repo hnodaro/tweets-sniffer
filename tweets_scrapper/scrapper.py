@@ -24,4 +24,4 @@ class Scrapper:
 
 if __name__ == "__main__":
     scrapper = Scrapper()
-    scrapper.scrapp_tweets("aioncamghgri", 10)
+    scrapper.scrapp_tweets("realDonaldTrump", 10)
