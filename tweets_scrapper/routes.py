@@ -7,6 +7,7 @@ def home():
     if request.method == "POST":
         username = request.form.get("username")
         limit  = request.form.get("limit")
+        limit = int(limit) if limit else None
         scrapp = Scrapper()
         res = scrapp.scrapp_tweets(username, limit)
         res = res[['date','tweet','nlikes','nreplies','nretweets']]
