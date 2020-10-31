@@ -10,7 +10,11 @@ def home():
         limit = int(limit) if limit else None
         scrapp = Scrapper()
         res = scrapp.scrapp_tweets(username, limit)
-        res = res[['date','tweet','nlikes','nreplies','nretweets']]
-        res = res.rename(columns={"date": "Date", "tweet": "Tweet", "nlikes": "Number of likes", "nreplies": "Number of replies", "nretweets": "Number of retweets"})
-        return render_template('result.html', username=username, tables=[res.to_html(classes='table table-striped text-center',index = False, header="true")])
+        if res:
+            res = res[['date','tweet','nlikes','nreplies','nretweets']]
+            res = res.rename(columns={"date": "Date", "tweet": "Tweet", "nlikes": "Number of likes", "nreplies": "Number of replies", "nretweets": "Number of retweets"})
+            return render_template('result.html', username=username, tables=[res.to_html(classes='table table-striped text-center',index = False, header="true")])
+        else:
+            err = "Username: "+ username + " doesn't exist on Twitter " 
+            return render_template('index.html', error = err)
     return render_template('index.html')

@@ -20,9 +20,10 @@ class Scrapper:
             
             return tweets_df.head(limit) if limit != None else tweets_df
         except KeyError as e:
-            print("Username: "+ username + " doesn't exists on Twitter " + str(e))
+            msg = "Username: "+ username + " doesn't exists on Twitter "
+            print(msg)
             return None
 
 if __name__ == "__main__":
     scrapper = Scrapper()
-    scrapper.scrapp_tweets("kbyle06", 50)
+    scrapper.scrapp_tweets("mlghdsjghskmghj", 50)
