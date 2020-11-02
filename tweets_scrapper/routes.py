@@ -16,11 +16,11 @@ def home():
             res = res.rename(columns={"date": "Date", "tweet": "Tweet", "nlikes": "Number of likes", "nreplies": "Number of replies", "nretweets": "Number of retweets"})
             session['res'] = res.to_dict('list')
             session['username'] = username
-            return render_template('result.html', username=username, tables=[res.to_html(classes='table table-striped text-center',index = False, header="true")])
+            return render_template('result.html', username=username, tables=[res.to_html(classes='table table-striped text-xs-center',index = False, header="true")])
         else:
             err = "Username: "+ username + " doesn't exist on Twitter " 
-            return render_template('index.html', error = err)
-    return render_template('index.html')
+            return render_template('index_.html', error = err)
+    return render_template('index_.html')
 
 @app.route('/download', methods=['GET', 'POST'])
 def download():

@@ -1,125 +1,90 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" >
+		<title>Tweets Scrapper</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="static/i/favicon.png" type="image/x-icon">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Rubik:100,200,300,400,600,500,700,800,900|Karla:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!-- Bootstrap 4.3.1 CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!-- Slick 1.8.1 jQuery plugin CSS (Sliders) -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<!-- Fancybox 3 jQuery plugin CSS (Open images and video in popup) -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+		<!-- AOS 2.3.4 jQuery plugin CSS (Animations) -->
+		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+		<!-- FontAwesome CSS -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<!-- Startup 3 CSS (Styles for all blocks) -->
+		<link href="static/css/style.css" rel="stylesheet" />
+		<!-- jQuery 3.3.1 -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head> 
+	<body>
+<!-- Navigation Mobile type 1 -->
 
-<head>
-	<title>Tweets Scrapper</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="static/images/icons/twitter.png" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/fonts/iconic/css/material-design-iconic-font.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/animsition/css/animsition.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/daterangepicker/daterangepicker.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/vendor/noui/nouislider.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="static/css/util.css">
-	<link rel="stylesheet" type="text/css" href="static/css/main.css">
-	<!--===============================================================================================-->
-</head>
-
-<body>
-
-	{% block content %}{% endblock %}
-
-	<!--===============================================================================================-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-	<script>
-		$(".js-select2").each(function () {
-			$(this).select2({
-				minimumResultsForSearch: 20,
-				dropdownParent: $(this).next('.dropDownSelect2')
-			});
+		{% block content %}{% endblock %}
 
 
-			$(".js-select2").each(function () {
-				$(this).on('select2:close', function (e) {
-					if ($(this).val() == "Please chooses") {
-						$('.js-show-service').slideUp();
-					}
-					else {
-						$('.js-show-service').slideUp();
-						$('.js-show-service').slideDown();
-					}
+		<!-- Footer 11 -->
+		<footer class="pt-15 pb-15 bg-dark color-white text-center footer_11">
+			<div class="container px-xl-0">
+				<div class="row align-items-center">
+					<div class="mb-20 mb-lg-0 col-lg-3">
+						<a href="#" class="link logo color-white">Tweets Scrapper</a>
+					</div>
+					<div class="col-lg-9 text-lg-right">
+						<a href="#" class="link color-white mr-10">Privacy Policy</a>
+						<a href="#" class="link color-white mx-10">Terms</a>
+						<div class="d-inline-block socials">
+							<a href="#" class="link color-white mx-10">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a href="#" class="link color-white mx-10">
+								<i class="fab fa-facebook-f"></i>
+							</a>
+							<a href="#" class="link color-white ml-10">
+								<i class="fab fa-google-plus-g"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+
+		<script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
+		<!-- Bootstrap 4.3.1 JS -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+		<!-- Fancybox 3 jQuery plugin JS (Open images and video in popup) -->
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<!-- Google maps JS API -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
+		<!-- Slick 1.8.1 jQuery plugin JS (Sliders) -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<!-- AOS 2.3.4 jQuery plugin JS (Animations) -->
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+		<!-- Maskedinput jQuery plugin JS (Masks for input fields) -->
+		<script src="static/js/jquery.maskedinput.min.js"></script>
+		<!-- Startup 3 JS (Custom js for all blocks) -->
+		<script src="static/js/script.js"></script>
+
+		<script>	
+			$(document).ready(function() {
+				$("#btnFetch").click(function() {
+				  // disable button
+				  $(this).prop("disabled", true);
+				  // add spinner to button
+				  $(this).html(
+					`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Loading...`
+				  );
 				});
 			});
-		})
-	</script>
-	<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/noui/nouislider.min.js"></script>
-	<script>
-		var filterBar = document.getElementById('filter-bar');
-
-		noUiSlider.create(filterBar, {
-			start: [1500, 3900],
-			connect: true,
-			range: {
-				'min': 1500,
-				'max': 7500
-			}
-		});
-
-		var skipValues = [
-			document.getElementById('value-lower'),
-			document.getElementById('value-upper')
-		];
-
-		filterBar.noUiSlider.on('update', function (values, handle) {
-			skipValues[handle].innerHTML = Math.round(values[handle]);
-			$('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
-			$('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
-		});
-	</script>
-	<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-23581568-13');
-	</script>
-	<script>	
-	$(document).ready(function() {
-		$("#btnFetch").click(function() {
-		  // disable button
-		  $(this).prop("disabled", true);
-		  // add spinner to button
-		  $(this).html(
-			`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Loading...`
-		  );
-		});
-	});
-	</script>
-
-</body>
-
+			</script>
+	</body>
 </html>
