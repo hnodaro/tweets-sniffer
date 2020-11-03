@@ -2,6 +2,7 @@ from tweets_scrapper import app
 from flask import render_template, redirect, url_for, request, request, make_response, session
 from tweets_scrapper.scrapper import Scrapper
 import pandas as pd
+import pyarrow as pa
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -28,7 +29,6 @@ def download():
     df = pd.DataFrame(dict_obj)
     filename = session['username'] +"_tweets.csv"
     resp = make_response(df.to_csv(index=None, encoding="utf-16", sep=";" ))
-    print(session['res'])
     resp.headers["Content-Disposition"] = "attachment; filename="+filename
     resp.headers["Content-Type"] = "text/csv"
     return resp
