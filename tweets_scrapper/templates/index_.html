@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="pt-50 pb-100 bg-light text-center contact_2">
+	<div class="container px-xl-0">
+		<form action="/" method="post">
+			<div class="row justify-content-center">
+				<div class="col-xl-6 col-lg-8 col-md-10">
+					<h2 class="mt-20 mb-40 small">Tweets Scrapper</h2>
+					<label for="username">Twitter Username</label>
+					<input type="text"
+						class="input mb-30 w-full lg radius10 border-gray focus-action-1 color-heading placeholder-heading text-left"
+						id="username" name="username" required placeholder="Ex: realDonaldTrump">
+					<label for="limit">Number of tweets to retrieve (If no value all tweets will be retrieved)</label>
+					<input type="number"
+						class="input mb-30 w-full lg radius10 border-gray focus-action-1 color-heading placeholder-heading text-left"
+						name="limit" placeholder="Ex: 50">
+
+					<button id="btnFetch" type="submit" class="btn mb-30 lg w-full action-1">Submit</button>
+				</div>
+		</form>
+	</div>
+	</div>
+</section>
+
+{% endblock %}
