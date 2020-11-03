@@ -5,13 +5,11 @@
 <div class="container px-xl-0">
   <div class="row justify-content-center">
     <h2 class="mt-20 mb-40 small">@{{ username}}'s tweets</h2>
-    <button type="button" class="btn mb-30 w-full action-1" onclick="location.href='/download'" class="btn btn-primary">Download CSV</button>
+    <button type="button" class="btn mb-30 w-full action-1" onclick="location.href='/download'"
+      class="btn btn-primary">Download CSV</button>
   </div>
+    {% for table in tables %}
+    {{ table|safe }}
+    {% endfor %}
 </div>
-
-{% for table in tables %}
-{{ table|safe }}
-{% endfor %}
-
-
 {% endblock %}

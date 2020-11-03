@@ -4971,3 +4971,8 @@ b, strong {
     max-height: 80vh;
   }
 }
+
+.tr{
+  text-align: center;
+  margin: auto
+}
