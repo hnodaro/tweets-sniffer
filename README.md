@@ -1,7 +1,7 @@
 [![Python 3.6|3.7|3.8](https://img.shields.io/badge/Python-3.6%2F3.7%2F3.8-blue.svg)] [![GitHub license](https://img.shields.io/github/license/haccer/tweep.svg)](https://github.com/haccer/tweep/blob/master/LICENSE)
 
-# Tweets sniffer
-A web Flask application allowing to get all tweets from a particular user and download it in a CSV file.
+# Tweets scrapper
+A web Flask application written in Python allowing to get all tweets from a particular user and download it in a CSV file.
 It use twint library to get the tweets.
 
 ![Capture1](https://user-images.githubusercontent.com/15652168/98169945-77261900-1eed-11eb-8225-4315e7de5b45.JPG)
