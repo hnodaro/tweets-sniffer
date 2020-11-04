@@ -17,7 +17,7 @@ def home():
             res = res.rename(columns={"date": "Date", "tweet": "Tweet", "nlikes": "Number of likes", "nreplies": "Number of replies", "nretweets": "Number of retweets"})
             session['res'] = res.to_dict('list')
             session['username'] = username
-            return render_template('result.html', username=username, tables=[res.to_html(justify='center' ,classes='table table-striped',index = False, header="true")])
+            return render_template('result.html', username=username, tables=[res.to_html(justify='center', render_links=True, border =0, classes='table table-striped table-bordered table-hover',index = False, header="true")])
         else:
             err = "Username: "+ username + " doesn't exist on Twitter " 
             return render_template('index_.html', error = err)
