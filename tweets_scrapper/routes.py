@@ -2,7 +2,6 @@ from tweets_scrapper import app
 from flask import render_template, redirect, url_for, request, request, make_response, session
 from tweets_scrapper.scrapper import Scrapper
 import pandas as pd
-import pyarrow as pa
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -17,7 +16,7 @@ def home():
             res = res.rename(columns={"date": "Date", "tweet": "Tweet", "nlikes": "Number of likes", "nreplies": "Number of replies", "nretweets": "Number of retweets"})
             session['res'] = res.to_dict('list')
             session['username'] = username
-            return render_template('result.html', username=username, tables=[res.to_html(justify='center' ,classes='table table-striped',index = False, header="true")])
+            return render_template('result.html', username=username, tables=[res.to_html(justify='center', render_links=True, border =0, classes='table table-striped table-bordered table-hover',index = False, header="true")])
         else:
             err = "Username: "+ username + " doesn't exist on Twitter " 
             return render_template('index_.html', error = err)
