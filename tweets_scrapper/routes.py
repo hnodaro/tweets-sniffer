@@ -2,7 +2,6 @@ from tweets_scrapper import app
 from flask import render_template, redirect, url_for, request, request, make_response, session
 from tweets_scrapper.scrapper import Scrapper
 import pandas as pd
-import pyarrow as pa
 
 @app.route('/', methods=['GET', 'POST'])
 def home():

@@ -3,3 +3,4 @@ tweets-sniffer
 virt
 __pycache__
 flask_session
+env
