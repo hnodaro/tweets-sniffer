@@ -4,3 +4,4 @@ virt
 __pycache__
 flask_session
 env
+doc
