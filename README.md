@@ -10,6 +10,15 @@ It use twint library to get the tweets.
 
 ## Installing
 
+**Clone the repo**
+```bash
+git clone https://github.com/hnodaro/tweets-sniffer.git
+```
+**Change the working directory to tweets-sniffer**
+```bash
+cd tweets-sniffer
+```
+
 **Install the libraries**
 ```bash
 pip install . -r requirements.txt
