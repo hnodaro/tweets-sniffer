@@ -827,7 +827,6 @@ input[type=radio] + label:before {
 
 /* Alerts */
 .alert {
-  display: none;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;

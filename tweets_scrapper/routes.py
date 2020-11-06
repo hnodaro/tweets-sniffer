@@ -10,17 +10,17 @@ def home():
         limit  = request.form.get("limit")
         limit = int(limit) if limit else None
         scrapp = Scrapper()
-        res = scrapp.scrapp_tweets(username, limit)
-        if isinstance(res, pd.DataFrame):
+        try:
+            res = scrapp.scrapp_tweets(username, limit)
             res = res[['date','tweet','nlikes','nreplies','nretweets']]
             res = res.rename(columns={"date": "Date", "tweet": "Tweet", "nlikes": "Number of likes", "nreplies": "Number of replies", "nretweets": "Number of retweets"})
             session['res'] = res.to_dict('list')
             session['username'] = username
             return render_template('result.html', username=username, tables=[res.to_html(justify='center', render_links=True, border =0, classes='table table-striped table-bordered table-hover',index = False, header="true")])
-        else:
+        except:
             err = "Username: "+ username + " doesn't exist on Twitter " 
-            return render_template('index_.html', error = err)
-    return render_template('index_.html')
+            return render_template('index.html', error = err)
+    return render_template('index.html')
 
 @app.route('/download', methods=['GET', 'POST'])
 def download():
