@@ -8,6 +8,11 @@
 				<div class="col-xl-6 col-lg-8 col-md-10">
 					<h2 class="mt-20 mb-40 small">Tweets Scrapper</h2>
 					<label for="username">Twitter Username</label>
+					{% if error %}
+					<div class="alert alert-danger" role="alert">
+						{{error}}
+					  </div>
+					{% endif %}
 					<input type="text"
 						class="input mb-30 w-full lg radius10 border-gray focus-action-1 color-heading placeholder-heading text-left"
 						id="username" name="username" required placeholder="Ex: realDonaldTrump">
