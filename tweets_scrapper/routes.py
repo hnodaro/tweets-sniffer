@@ -19,8 +19,8 @@ def home():
             return render_template('result.html', username=username, tables=[res.to_html(justify='center', render_links=True, border =0, classes='table table-striped table-bordered table-hover',index = False, header="true")])
         else:
             err = "Username: "+ username + " doesn't exist on Twitter " 
-            return render_template('index_.html', error = err)
-    return render_template('index_.html')
+            return render_template('index.html', error = err)
+    return render_template('index.html')
 
 @app.route('/download', methods=['GET', 'POST'])
 def download():
